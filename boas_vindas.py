@@ -1,7 +1,8 @@
 import menu_nav
 import os
 
-def vindas( ):
+
+def vindas():
 
     if os.name == 'nt':
         os.system('cls')
@@ -14,4 +15,6 @@ def vindas( ):
         menu_nav.nav()
     elif red == 2:
         print('Obrigada por visitar nosso programa. Volte sempre!')
+
+
 vindas()
