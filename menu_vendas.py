@@ -1,7 +1,6 @@
 from menu_cadastro import lista_cadastrados
 import Tela
 
-
 carrinho = []
 
 def menu_vendas():
@@ -13,7 +12,7 @@ def menu_vendas():
         print('3. Excluir produtos do carrinho;')
         print('4. Finalizar compra;')
         print('5. Voltar Para o Menu de Navegação;')
-    
+
         while True:
             print('')
             opc = input("Digite o que deseja: ")
@@ -21,7 +20,7 @@ def menu_vendas():
                 print('Código inválido!')
             else:
                 break
-            
+
         if opc == '1':
             ### erro no cadastro
             Tela.LimpaTela()
@@ -36,15 +35,15 @@ def menu_vendas():
                     while cont_01 < len(carrinho):
                         print(f'{cont_01:^7}{carrinho[cont_01][0]:.<20}R${carrinho[cont_01][1]}')
                         cont_01 += 1  
-                                             
+
                 else:
                     print()
                     print('Carrinho está vázio, adicione um produto para seguir com a finalização da compra')
                 pergunta = input('Mostrar novamente? [S/N]')   
                 if pergunta in 'Nn':
                     break
-                
-                
+
+
         elif opc == '2':
             while True:
                 Tela.LimpaTela()
@@ -71,26 +70,26 @@ def menu_vendas():
                             cod_produto = int(input('Digite o código do produto a ser adicionado ao carrinho: '))
                 else:
                     print('Nenhum produto cadastrado!')
-    
+
                 print('O que deseja fazer agora?')
                 print('1. Adicionar outro produto ao carrinho.')
                 print('2. Voltar.')
-    
+
                 num = input('Digite a opção: ')
-    
+
                 while num not in "12":
                     print('Código inválido!')
-    
+
                     num = input('Digite a opção: ')
-    
+
                 if num == '1':
                     print()
-                    
+
                 elif num == '2':
                     break
-                        
+
                 
-                
+
         elif opc == '3':
             cont_01 = 0
             while True:
@@ -133,11 +132,11 @@ def menu_vendas():
                     print(f'A soma dos produtos do carrinho deu R${soma}')
                 else:
                     print('Carrinho vazio')
-    
+
                 pergunta = input('Deseja mostrar novamente? [S/N]')   
                 if pergunta in 'Nn':
                     break
-                
+
         elif opc == '5':
             carrinho.clear()
             print()
