@@ -118,8 +118,10 @@ def menu_vendas():
                             else:
                                 print('Código de produto inválido!')
                                 num_del = int(input('Digite o código do produto a ser deletado: '))
-                    else:
-                        break   
+                else:
+                    
+                    input('Não é possivel excluir - não há itens no carrinho, aperte Enter para retornar ao menu principal ')
+                    break   
                     
         elif opc == '4':
             while True:
