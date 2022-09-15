@@ -15,7 +15,7 @@ def MenuCadastro():
         print('4. Voltar Para o Menu de Navegação;')
         while True:
             num = input("Digite o que deseja: ")
-            if num not in '1234':
+            if num not in '1234' or len(num) > 1:
                 print('Código inválido!')
             else:
                 break
