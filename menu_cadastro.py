@@ -23,9 +23,21 @@ def MenuCadastro():
             while True:
                 Tela.LimpaTela()
                 while True:
-                    nome = input('Digite o nome do produto: ')
+                    nome = input('Digite o nome do produto: ').capitalize()
+                    print(nome)
                     if nome.isalpha() == True:
-                        break
+                        if len(lista_cadastrados) > 0:
+                            cont_nome_existente = 0
+                            for z in range(0, len(lista_cadastrados)):
+                                if lista_cadastrados[z][0] == nome:
+                                    cont_nome_existente += 1
+                            if cont_nome_existente > 0:
+                                print('Produto já cadastrado! Tente novamente!')
+                            else: 
+                                break
+                                
+                        else: 
+                            break
                     else:
                         print('Nome inválido! O nome pode conter apenas letras.')
                 while True:
