@@ -16,7 +16,7 @@ def menu_vendas():
         while True:
             print('')
             opc = input("Digite o que deseja: ")
-            if opc not in '12345':
+            if opc not in '12345' or len(opc) > 1: 
                 print('Código inválido!')
             else:
                 break
